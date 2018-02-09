@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.axelio.holamundo.model.Alumno;
 
@@ -38,9 +39,13 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
 
+    public void enviarDatos(View view){
         EditText edtNombre = (EditText) findViewById(R.id.nombre);
         String nombre = edtNombre.getText().toString();
+
+        Toast.makeText(getBaseContext(), "Felicidades tu nombre es: " + nombre, Toast.LENGTH_LONG).show();
 
     }
 
